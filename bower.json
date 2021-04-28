@@ -1,18 +1,18 @@
 {
-  "name": "litecore-lib",
-  "main": "./litecore-lib.min.js",
+  "name": "seqcore-lib",
+  "main": "./seqcore-lib.min.js",
   "version": "0.13.19",
-  "homepage": "http://litecore.io",
+  "homepage": "http://seqcore.io",
   "authors": [
     "BitPay, Inc."
   ],
-  "description": "A pure, powerful core for your litecoin project.",
+  "description": "A pure, powerful core for your sequence project.",
   "moduleType": [
     "globals"
   ],
   "keywords": [
-    "litecoin",
-    "litecore",
+    "sequence",
+    "seqcore",
     "btc",
     "satoshi"
   ],

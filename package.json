@@ -1,5 +1,5 @@
 {
-  "name": "litecore-lib",
+  "name": "seqcore-lib",
   "version": "0.13.21",
   "description": "A pure and powerful JavaScript Litecoin library.",
   "author": "BitPay <dev@bitpay.com>",
@@ -13,7 +13,7 @@
   "contributors": [
     {
       "name": "Charlie Lee",
-      "email": "coblee@litecoin.org"
+      "email": "coblee@sequence.org"
     },
     {
       "name": "Daniel Cousens",
@@ -62,10 +62,14 @@
     {
       "name": "Michael Rodriguez",
       "email": "michael@rodtec.org"
+    },
+    {
+      "name": "syn",
+      "email": "syn@synister.dev"
     }
   ],
   "keywords": [
-    "litecoin",
+    "sequence",
     "bitcoin",
     "transaction",
     "address",
@@ -83,7 +87,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/litecoin-project/litecore-lib.git"
+    "url": "https://github.com/syyyn/seqcore-lib.git"
   },
   "browser": {
     "request": "browser-request"
@@ -100,8 +104,8 @@
   "devDependencies": {
     "brfs": "^1.2.0",
     "chai": "^1.10.0",
-    "gulp": "^3.9.1",
-    "litecore-build": "litecoin-project/litecore-build",
+    "gulp": "^3.8.10",
+    "seqcore-build": "https://github.com/syyyn/seqcore-build.git",
     "sinon": "^1.13.0"
   },
   "license": "MIT"

@@ -1,70 +1,70 @@
 'use strict';
 
-var litecore = module.exports;
+var seqcore = module.exports;
 
 // module information
-litecore.version = 'v' + require('./package.json').version;
-litecore.versionGuard = function(version) {
+seqcore.version = 'v' + require('./package.json').version;
+seqcore.versionGuard = function(version) {
   if (version !== undefined) {
-    var message = 'More than one instance of litecore-lib found. ' +
-      'Please make sure to require litecore-lib and check that submodules do' +
-      ' not also include their own litecore-lib dependency.';
+    var message = 'More than one instance of seqcore-lib found. ' +
+      'Please make sure to require seqcore-lib and check that submodules do' +
+      ' not also include their own seqcore-lib dependency.';
     throw new Error(message);
   }
 };
-litecore.versionGuard(global._litecore);
-global._litecore = litecore.version;
+seqcore.versionGuard(global._seqcore);
+global._seqcore = seqcore.version;
 
 // crypto
-litecore.crypto = {};
-litecore.crypto.BN = require('./lib/crypto/bn');
-litecore.crypto.ECDSA = require('./lib/crypto/ecdsa');
-litecore.crypto.Hash = require('./lib/crypto/hash');
-litecore.crypto.Random = require('./lib/crypto/random');
-litecore.crypto.Point = require('./lib/crypto/point');
-litecore.crypto.Signature = require('./lib/crypto/signature');
+seqcore.crypto = {};
+seqcore.crypto.BN = require('./lib/crypto/bn');
+seqcore.crypto.ECDSA = require('./lib/crypto/ecdsa');
+seqcore.crypto.Hash = require('./lib/crypto/hash');
+seqcore.crypto.Random = require('./lib/crypto/random');
+seqcore.crypto.Point = require('./lib/crypto/point');
+seqcore.crypto.Signature = require('./lib/crypto/signature');
 
 // encoding
-litecore.encoding = {};
-litecore.encoding.Base58 = require('./lib/encoding/base58');
-litecore.encoding.Base58Check = require('./lib/encoding/base58check');
-litecore.encoding.BufferReader = require('./lib/encoding/bufferreader');
-litecore.encoding.BufferWriter = require('./lib/encoding/bufferwriter');
-litecore.encoding.Varint = require('./lib/encoding/varint');
+seqcore.encoding = {};
+seqcore.encoding.Base58 = require('./lib/encoding/base58');
+seqcore.encoding.Base58Check = require('./lib/encoding/base58check');
+seqcore.encoding.BufferReader = require('./lib/encoding/bufferreader');
+seqcore.encoding.BufferWriter = require('./lib/encoding/bufferwriter');
+seqcore.encoding.Varint = require('./lib/encoding/varint');
 
 // utilities
-litecore.util = {};
-litecore.util.buffer = require('./lib/util/buffer');
-litecore.util.js = require('./lib/util/js');
-litecore.util.preconditions = require('./lib/util/preconditions');
+seqcore.util = {};
+seqcore.util.buffer = require('./lib/util/buffer');
+seqcore.util.js = require('./lib/util/js');
+seqcore.util.preconditions = require('./lib/util/preconditions');
 
 // errors thrown by the library
-litecore.errors = require('./lib/errors');
+seqcore.errors = require('./lib/errors');
 
 // main bitcoin library
-litecore.Address = require('./lib/address');
-litecore.Block = require('./lib/block');
-litecore.MerkleBlock = require('./lib/block/merkleblock');
-litecore.BlockHeader = require('./lib/block/blockheader');
-litecore.HDPrivateKey = require('./lib/hdprivatekey.js');
-litecore.HDPublicKey = require('./lib/hdpublickey.js');
-litecore.Networks = require('./lib/networks');
-litecore.Opcode = require('./lib/opcode');
-litecore.PrivateKey = require('./lib/privatekey');
-litecore.PublicKey = require('./lib/publickey');
-litecore.Script = require('./lib/script');
-litecore.Transaction = require('./lib/transaction');
-litecore.URI = require('./lib/uri');
-litecore.Unit = require('./lib/unit');
+seqcore.Address = require('./lib/address');
+seqcore.Block = require('./lib/block');
+seqcore.MerkleBlock = require('./lib/block/merkleblock');
+seqcore.BlockHeader = require('./lib/block/blockheader');
+seqcore.HDPrivateKey = require('./lib/hdprivatekey.js');
+seqcore.HDPublicKey = require('./lib/hdpublickey.js');
+seqcore.Networks = require('./lib/networks');
+seqcore.Opcode = require('./lib/opcode');
+seqcore.PrivateKey = require('./lib/privatekey');
+seqcore.PublicKey = require('./lib/publickey');
+seqcore.Script = require('./lib/script');
+seqcore.Transaction = require('./lib/transaction');
+seqcore.URI = require('./lib/uri');
+seqcore.Unit = require('./lib/unit');
 
 // dependencies, subject to change
-litecore.deps = {};
-litecore.deps.bnjs = require('bn.js');
-litecore.deps.bs58 = require('bs58');
-litecore.deps.Buffer = Buffer;
-litecore.deps.elliptic = require('elliptic');
-litecore.deps.scryptsy = require('scryptsy');
-litecore.deps._ = require('lodash');
+seqcore.deps = {};
+seqcore.deps.bnjs = require('bn.js');
+seqcore.deps.bs58 = require('bs58');
+seqcore.deps.Buffer = Buffer;
+seqcore.deps.elliptic = require('elliptic');
+seqcore.deps.scryptsy = require('scryptsy');
+seqcore.deps._ = require('lodash');
 
 // Internal usage, exposed for testing/advanced tweaking
-litecore.Transaction.sighash = require('./lib/transaction/sighash');
+seqcore.Transaction.sighash = require('./lib/transaction/sighash');

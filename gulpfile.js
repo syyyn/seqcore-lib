@@ -1,5 +1,5 @@
 
 
-var litecoreTasks = require('litecore-build');
+var seqcoreTasks = require('seqcore-build');
 
-litecoreTasks('lib');
+seqcoreTasks('lib');

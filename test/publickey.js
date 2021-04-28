@@ -351,20 +351,20 @@ describe('PublicKey', function() {
   describe('hashes', function() {
 
     // wif private key, address
-    // see: https://github.com/litecoin-project/litecoin/blob/master-0.10/src/test/key_tests.cpp#L20
+    // see: https://github.com/sequence-project/sequence/blob/master-0.10/src/test/key_tests.cpp#L20
     var data = [
       ['6uGFQ4DSW7zh1viHZi6iiVT17CncvoaV4MHvGvJKPDaLCdymj87', 'LiUo6Zn39joYJBzPUhssbDwAywhjFcoHE3'],
       ['6vVo7sPkeLTwVdAntrv4Gbnsyr75H8ChD3P5iyHziwaqe8mCYR5', 'LZJvLSP5SGKcFS13MHgdrVhpFUbEMB5XVC'],
       ['T3gJYmBuZXsdd65E7NQF88ZmUP2MaUanqnZg9GFS94W7kND4Ebjq', 'Lh2G82Bi33RNuzz4UfSMZbh54jnWHVnmw8'],
       ['T986ZKRRdnuuXLeDZuKBRrZW1ujotAncU9WTrFU1n7vMgRW75ZtF', 'LWegHWHB5rmaF5rgWYt1YN3StapRdnGJfU']
     ];
-    
+
     data.forEach(function(d){
       var publicKey = PrivateKey.fromWIF(d[0]).toPublicKey();
       var address = Address.fromString(d[1]);
       address.hashBuffer.should.deep.equal(publicKey._getID());
     });
-    
+
   });
 
   describe('#toString', function() {
